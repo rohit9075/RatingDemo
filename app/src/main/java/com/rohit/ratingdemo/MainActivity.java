@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+/**
+ * Activity to demonstrate rating stars.
+ */
+
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
     private RatingBar mRatingbar;
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     public void onClick(View v) {
 
         if (v.getId() == R.id.button){
+
+            // getting the number according to selected stars.
             String rating=String.valueOf(mRatingbar.getRating());
             Toast.makeText(this, rating, Toast.LENGTH_SHORT).show();
         }
